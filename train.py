@@ -57,7 +57,7 @@ for run in range(args.num_trials):
     ica_predict = ica.predict(graph, eval_idx, test, conditional_node_to_label_map)
     ica_accuracy = accuracy_score(y_true, ica_predict)
     ica_accuracies.append(ica_accuracy)
-    print 'Run ' + str(run) + ': \t\t' + str(ica_accuracy) + ', Elapsed time: \t\t' + str(time.time() - t_begin)
+    print('Run ' + str(run) + ': \t\t' + str(ica_accuracy) + ', Elapsed time: \t\t' + str(time.time() - t_begin))
 
 print("Final test results: {:.5f} +/- {:.5f} (sem)".format(np.mean(ica_accuracies), sem(ica_accuracies)))
 
